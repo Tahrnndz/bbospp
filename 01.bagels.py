@@ -7,7 +7,7 @@ Tags: short, game, puzzle"""
 
 import random
 
-NUM_DIGITS = 3 # (!) Try setting this to 1 or 10
+NUM_DIGITS = 3# (!) Try setting this to 1 or 10
 MAX_GUESSES = 10 # (!) Try setting this to 1 or 100
 
 
@@ -29,14 +29,15 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))
         # This stores the secret number the player needs to guess:
         secretNum = getSecretNum()
         print(' I have throught up a number.')
-        print(' You have {} guesses to get it.'.format(MAX_GUESSES))
-
+        # print(' You have {} guesses to get it.'.format(MAX_GUESSES))
+        print(f' You have {MAX_GUESSES} guesses to get it.')
         numGuesses = 1
         while numGuesses <= MAX_GUESSES:
             guess = ''
             # Keep looping until they enter a valid guess:
             while len(guess) != NUM_DIGITS or not guess.isdecimal():
-                print('Guess#{}: '.format(numGuesses))
+                # print('Guess #{}: '.format(numGuesses))
+                print(f'Guess #: {numGuesses}: ')
                 guess = input('> ')
             
             clues = getClues(guess, secretNum)
@@ -65,7 +66,6 @@ def getSecretNum():
     secretNum = ''
     for i in range(NUM_DIGITS):
         secretNum += str(numbers[i])
-    print(secretNum)
     return secretNum
 
 def getClues(guess, secretNum):
