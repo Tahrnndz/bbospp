@@ -1,5 +1,5 @@
 """Birthday Paradox Simulation, by Al Sweigart al@inventwithpython.com
-Exployr the surprising probabilities of the "Birthday Pradox".
+Explore the surprising probabilities of the "Birthday Pradox".
 More info at https://en.wikipedia.org/wiki/Birthday_problem
 View this code at https://nostarch.com/big-book-smal-python-projects
 Tags: short, math, simulation"""
@@ -30,7 +30,7 @@ def getMatch(birthdays):
 
     # Compare each birthday to every other birthday:
     for a, birthdayA in enumerate(birthdays):
-        for b, birthdayB in enumerate(birthdays[a +1 :]):
+        for b, birthdayB in enumerate(birthdays[a + 1 :]):
             if birthdayA == birthdayB:
                 return birthdayA # Return the matching birthday.
 
@@ -88,7 +88,7 @@ print()
 print('Generating', numBdays, 'random birthdays 100,000 times...')
 input('Press Enter to begin...')
 
-print('Let\s run another 100,000 simulations.')
+print('Let\'s run another 100,000 simulations.')
 simMatch = 0 # How many simulations had matching birthdays in them.
 for i in range(100_000):
     # Report on the progress every 10,000 simulations:
