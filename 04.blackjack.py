@@ -103,7 +103,7 @@ def main():
 
         playerValue = getHandValue(playerHand)
         dealerValue = getHandValue(dealerHand)
-        # Handle wheter the player won, lost or tied:
+        # Handle whether the player won, lost or tied:
         if dealerValue > 21:
             print('Dealer busts! You win ${}!'.format(bet))
             money += bet
@@ -193,11 +193,11 @@ def getHandValue(cards):
 
 
 def displayCards(cards):
-    """Display all the cards in the cads list."""
+    """Display all the cards in the cards list."""
     rows = ['', '', '', '', ''] # The text to display on each row.
 
     for i, card in enumerate(cards):
-        rows[0] += ' __ ' # Print the top line of the card.
+        rows[0] += '  __ ' # Print the top line of the card.
         if card == BACKSIDE:
             # Print a card's back:
             rows[1] += '|## |'
@@ -206,13 +206,13 @@ def displayCards(cards):
         else:
             # Print the card's front:
             rank, suit = card # The card is a tuple data structure
-            rows[1] += '|{} | '.format(rank.ljust(2))
+            rows[1] += '|{} |'.format(rank.ljust(2))
             rows[2] += '| {} |'.format(suit)
             rows[3] += '|_{}|'.format(rank.rjust(2, '_'))
 
         # Print each row on the screen:
-        for row in rows:
-            print(row)
+    for row in rows:
+        print(row)
 
 
 def getMove(playerHand, money):
