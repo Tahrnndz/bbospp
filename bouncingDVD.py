@@ -11,7 +11,7 @@ import sys, random, time
 try:
     import bext
 except ImportError:
-    print('This program requires the bext modgule, which you')
+    print('This program requires the bext module, which you')
     print('can install by following the instructions at')
     print('https://pypi.org/project/Bext/')
     sys.exit()
